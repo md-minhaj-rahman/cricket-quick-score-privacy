@@ -1,158 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Cricket Quick Score</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Cricket Quick Score</title>
+<meta name="description" content="Privacy Policy for Cricket Quick Score, an offline cricket scoring app by MD Minhaj Rahman.">
 <style>
+  :root {
+    --bg: #f6f8f5;
+    --surface: #ffffff;
+    --text: #1f2a22;
+    --muted: #5b6b60;
+    --accent: #1b5e20;
+    --accent-soft: #e8f5e9;
+    --line: #dfe6e0;
+    --link: #0b6b2a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1a12;
+      --surface: #16241a;
+      --text: #e6efe8;
+      --muted: #a3b5a8;
+      --accent: #7bd88a;
+      --accent-soft: #1d3322;
+      --line: #28402d;
+      --link: #8fe39d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 24px 20px 60px;
-    color: #212121;
-    line-height: 1.6;
-    background: #FAFAFA;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 17px;
+    line-height: 1.7;
   }
-  h1 { color: #1B5E20; font-size: 26px; margin-bottom: 4px; }
-  .subtitle { color: #616161; font-size: 15px; margin-bottom: 4px; }
-  .meta { color: #757575; font-size: 13px; margin-bottom: 24px; }
-  h2 { color: #1B5E20; font-size: 19px; margin-top: 32px; border-bottom: 2px solid #C8E6C9; padding-bottom: 6px; }
-  a { color: #2E7D32; }
-  .toc { background: #E8F5E9; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; }
-  .toc ol { margin: 8px 0 0; padding-left: 20px; }
-  .toc li { margin-bottom: 4px; }
-  .note {
-    background: #FFF8E1;
-    border-left: 4px solid #FBC02D;
-    padding: 10px 14px;
-    margin: 12px 0;
-    font-size: 14px;
+  header.top {
+    background: var(--accent);
+    color: #fff;
+    padding: 40px 20px 34px;
   }
-  ul { padding-left: 22px; }
-  footer { margin-top: 40px; color: #9E9E9E; font-size: 13px; text-align: center; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) header.top { color: #0f1a12; }
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header.top .wrap { padding: 0; }
+  header.top h1 {
+    margin: 0 0 6px;
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  header.top p { margin: 0; font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif; font-size: .95rem; opacity: .92; }
+  main { padding: 28px 0 60px; }
+  h2 {
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin: 2.2rem 0 .5rem;
+    padding-top: .4rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif; font-size: 1.02rem; margin: 1.3rem 0 .2rem; }
+  p, li { max-width: 68ch; }
+  ul { padding-left: 1.3rem; }
+  li { margin: .3rem 0; }
+  a { color: var(--link); }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .summary {
+    background: var(--accent-soft);
+    border-left: 5px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin: 0 0 1.5rem;
+  }
+  .summary h2 { border: 0; margin: 0 0 .4rem; padding: 0; font-size: 1.1rem; }
+  .summary ul { margin: 0; }
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 14px 22px;
+    margin: 0 0 1rem;
+  }
+  nav.toc strong { font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif; }
+  nav.toc ol { margin: .4rem 0 0; padding-left: 1.3rem; columns: 2; column-gap: 28px; }
+  @media (max-width: 560px) { nav.toc ol { columns: 1; } }
+  nav.toc li { margin: .15rem 0; font-size: .95rem; break-inside: avoid; }
+  .table-scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .95rem; margin: .6rem 0; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--accent-soft); font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif; }
+  footer { border-top: 1px solid var(--line); padding: 20px 0 40px; color: var(--muted); font-size: .9rem; }
 </style>
 </head>
 <body>
 
-<h1>🏏 Privacy Policy</h1>
-<div class="subtitle">Cricket Quick Score &nbsp;|&nbsp; com.niloy.quickscorecricketpro</div>
-<div class="meta">Developer: MD Minhaj Rahman &nbsp;|&nbsp; Last Updated: August 2026</div>
+<header class="top">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p>Cricket Quick Score &nbsp;|&nbsp; com.niloy.quickscorecricketpro</p>
+    <p>Developer: MD Minhaj Rahman &nbsp;|&nbsp; Last updated: 21 November 2026</p>
+  </div>
+</header>
 
-<div class="toc">
-  <strong>Table of Contents</strong>
-  <ol>
-    <li><a href="#intro">Introduction</a></li>
-    <li><a href="#info-collect">Information We Collect</a></li>
-    <li><a href="#admob">Google AdMob & Advertising</a></li>
-    <li><a href="#storage">Data Storage & Retention</a></li>
-    <li><a href="#permissions">App Permissions</a></li>
-    <li><a href="#coppa">Children's Privacy (COPPA)</a></li>
-    <li><a href="#gdpr">GDPR — Rights of EU Users</a></li>
-    <li><a href="#ccpa">CCPA/CPRA — Rights of California Users</a></li>
-    <li><a href="#third-party">Third-Party Services</a></li>
-    <li><a href="#changes">Changes to This Policy</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-  </ol>
-</div>
+<main class="wrap">
 
-<h2 id="intro">1. Introduction</h2>
-<p>Welcome to Cricket Quick Score, a free offline cricket scoring application developed by MD Minhaj Rahman. This Privacy Policy describes how we handle information when you use our app.</p>
-<p>By using Cricket Quick Score, you agree to the terms described in this Privacy Policy. If you do not agree, please discontinue use of the app.</p>
+  <section class="summary" aria-label="Summary">
+    <h2>The short version</h2>
+    <ul>
+      <li>Everything you enter (team names, player names, scores) stays on your phone. We do not run any server and we never receive it.</li>
+      <li>There are no accounts, no sign-up, no analytics and no crash-reporting tools in the app.</li>
+      <li>The app shows ads through Google AdMob. Google may collect your Advertising ID and device information to serve them.</li>
+      <li>If you are in the EEA, UK or a similar region, you choose your ad consent when you first open the app and can change it later in Settings → Privacy Options.</li>
+      <li>The app is not meant for people under 16.</li>
+    </ul>
+  </section>
 
-<h2 id="info-collect">2. Information We Collect</h2>
-<p><strong>Information you provide:</strong> The app allows you to enter player names, team names, and match scores. This data is stored only on your device using a local SQLite database and is never transmitted to any server.</p>
-<p><strong>Information collected automatically (via AdMob):</strong></p>
-<ul>
-  <li>Device Advertising ID (used for ad personalization)</li>
-  <li>IP address (used to determine approximate location for ads)</li>
-  <li>Device information (model, OS version, screen size)</li>
-  <li>App usage data (interactions with ads)</li>
-</ul>
-<div class="note">ℹ️ Note: Cricket Quick Score itself does not collect, store, or share any of the above data. This data is collected solely by Google AdMob under Google's own Privacy Policy.</div>
+  <nav class="toc" aria-label="Table of contents">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#you-enter">Information you enter</a></li>
+      <li><a href="#automatic">Information collected automatically</a></li>
+      <li><a href="#ads">Ads and your consent choices</a></li>
+      <li><a href="#storage">Storage, backup and deletion</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#features">Features you start yourself</a></li>
+      <li><a href="#not-collected">What we do not do</a></li>
+      <li><a href="#security">Security and device checks</a></li>
+      <li><a href="#children">Children’s privacy</a></li>
+      <li><a href="#gdpr">Your rights: EEA, UK and Switzerland</a></li>
+      <li><a href="#ccpa">Your rights: California and other US states</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
 
-<h2 id="admob">3. Google AdMob & Advertising</h2>
-<p>This app uses Google AdMob (provided by Google LLC) to display interstitial advertisements. AdMob uses the Advertising ID on your device to serve personalized or non-personalized ads.</p>
-<p>AdMob may collect and process the following data for advertising purposes:</p>
-<ul>
-  <li>Advertising ID / GAID (Google Advertising Identifier)</li>
-  <li>General device & network information</li>
-  <li>Ad interaction data (impressions, clicks)</li>
-</ul>
-<p>You can opt out of personalized advertising at any time:</p>
-<ul>
-  <li>Android: Settings → Google → Ads → "Opt out of Ads Personalization"</li>
-  <li>Or visit: <a href="https://www.google.com/settings/ads" target="_blank">https://www.google.com/settings/ads</a></li>
-</ul>
-<p>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-<p>AdMob's Terms: <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a></p>
-<p>You can learn more about how Google uses information from sites or apps that use our services by visiting: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a></p>
+  <h2 id="intro">1. Introduction</h2>
+  <p>Cricket Quick Score (“the app”) is a free cricket scoring app that works offline. It lets you score matches ball by ball, view scorecards and charts, and keep a history of matches on your own device. It is developed by MD Minhaj Rahman (“we”, “us”), based in Bangladesh.</p>
+  <p>This policy explains what information the app handles, what third parties collect when you use it, and the choices you have. By using the app you agree to this policy. If you do not agree, please stop using the app and uninstall it.</p>
 
-<h2 id="storage">4. Data Storage & Retention</h2>
-<p>All match data (scores, player names, match history) entered by users is stored locally on the device using SQLite. This data is never uploaded to any external server.</p>
-<p><strong>Retention:</strong> Data remains on your device until you manually delete it within the app (via Settings → Clear History) or uninstall the application.</p>
-<p><strong>Security:</strong> We implement standard Android security practices to protect locally stored data. However, we cannot guarantee absolute security of data stored on a device that has been rooted or compromised.</p>
+  <h2 id="you-enter">2. Information you enter</h2>
+  <p>You can type team names, player names and match settings (overs, toss, batting or bowling choice), and you score the match ball by ball. The app saves this together with the resulting scores, wickets, extras, over-by-over history, partnerships and fall-of-wickets lists.</p>
+  <ul>
+    <li>This data is saved only in a local SQLite database on your device.</li>
+    <li>It is never sent to us or to any server by the app.</li>
+    <li>Please avoid entering anything sensitive in name fields. Use nicknames or first names if you prefer.</li>
+  </ul>
+  <p>The app also keeps two small settings on your device: your “Keep screen on” choice and a marker that records whether an ad has already been shown during an innings. Neither contains personal information.</p>
 
-<h2 id="permissions">5. App Permissions</h2>
-<p>Cricket Quick Score requests the following permission:</p>
-<ul>
-  <li><strong>INTERNET</strong> — Required only for loading advertisements via Google AdMob. The app does not use this permission to upload any user data.</li>
-</ul>
-<p>No other sensitive permissions (camera, contacts, location, microphone, storage) are requested.</p>
+  <h2 id="automatic">3. Information collected automatically</h2>
+  <p>The app itself does not collect, store or share personal information with us. However, the app includes Google’s advertising and consent software (Google AdMob / Google Mobile Ads SDK and the Google User Messaging Platform). When ads are loaded, Google may automatically collect the following, under Google’s own privacy policy:</p>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Data</th><th>Why Google collects it</th></tr></thead>
+    <tbody>
+      <tr><td>Advertising ID (a resettable identifier on your device)</td><td>To serve and measure ads, and to personalize them where you have allowed it</td></tr>
+      <tr><td>IP address and approximate location derived from it</td><td>To serve ads for your region, and to prevent fraud</td></tr>
+      <tr><td>Device and app information (device model, operating system version, screen size, language, app name and version)</td><td>To deliver ads that fit your device and to keep the service secure</td></tr>
+      <tr><td>Ad interactions (ads shown, clicks, errors)</td><td>To measure ad performance and detect invalid activity</td></tr>
+      <tr><td>Your consent choice and consent-related data</td><td>To remember whether you agreed to ad personalization</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>We do not receive this data and we cannot identify you from it. You can read how Google handles it at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
 
-<h2 id="coppa">6. Children's Privacy (COPPA Compliance)</h2>
-<p>Cricket Quick Score is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-<p>If you are a parent or guardian and believe your child has used this app and provided personal information, please contact us immediately at <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a> and we will take steps to remove such information.</p>
-<p>This app is rated for users aged 15 and above in accordance with Google Play's content rating guidelines.</p>
+  <h2 id="ads">4. Ads and your consent choices</h2>
+  <p>The app is free and is supported by ads. It shows full-screen (interstitial) ads from Google AdMob, only occasionally and at a natural pause: at most once per innings, after an over has finished.</p>
+  <h3>Consent</h3>
+  <p>When you first open the app, Google’s User Messaging Platform may ask for your consent before ads are requested. This is shown where the law requires it, for example in the EEA and the UK. If consent is required and you do not give it, the app does not request ads. You can review or change your choice at any time in the app under <strong>Settings → Privacy Options</strong>. If that option does not apply in your region, the app tells you so.</p>
+  <h3>Personalized and non-personalized ads</h3>
+  <p>Depending on your region and choices, ads may be personalized using your Advertising ID or may be non-personalized. You can also control this on your device:</p>
+  <ul>
+    <li>Android: Settings → Google → Ads → delete your advertising ID or opt out of ads personalization (menu names vary by device).</li>
+    <li>Or visit <a href="https://myadcenter.google.com" rel="noopener">Google My Ad Center</a>.</li>
+  </ul>
+  <h3>Ad content</h3>
+  <p>We limit the ad content level in AdMob to “Teens” and block mature-audience ads. We cannot control every individual ad, and we do not endorse any advertiser. If you see an ad that seems inappropriate, you can report it from the ad itself.</p>
+  <p>If you click an ad, you leave the app and the advertiser’s own privacy practices apply.</p>
 
-<h2 id="gdpr">7. GDPR — Rights of EU/EEA Users</h2>
-<p>If you are located in the European Union or European Economic Area, you have the following rights under the General Data Protection Regulation (GDPR):</p>
-<ul>
-  <li><strong>Right to Access:</strong> Request a copy of data held about you.</li>
-  <li><strong>Right to Erasure:</strong> Request deletion of your personal data ("right to be forgotten").</li>
-  <li><strong>Right to Restriction:</strong> Request restriction of processing of your data.</li>
-  <li><strong>Right to Object:</strong> Object to processing of your data for direct marketing purposes.</li>
-  <li><strong>Right to Opt Out of Personalized Ads:</strong> Disable ad personalization via your device settings.</li>
-  <li><strong>Right to Withdraw/Modify Consent:</strong> You can review or change your ad-consent choices at any time from within the app via Settings → Privacy Options.</li>
-</ul>
-<p>Since Cricket Quick Score does not collect personal data directly, requests related to AdMob data should be directed to Google at: <a href="https://support.google.com/policies/troubleshooter/7575787" target="_blank">Google Privacy Support</a></p>
-<p>To exercise your rights, contact us at: <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a></p>
+  <h2 id="storage">5. Storage, backup and deletion</h2>
+  <ul>
+    <li><strong>Where:</strong> your match data is in the app’s private storage on your device.</li>
+    <li><strong>How long:</strong> until you delete it. We have no copy, so we cannot recover it for you.</li>
+    <li><strong>Delete one match:</strong> Match History → delete icon on that match.</li>
+    <li><strong>Delete everything:</strong> Settings → Clear Match History.</li>
+    <li><strong>Uninstalling</strong> the app removes its local data from your device.</li>
+  </ul>
+  <p><strong>Device backup.</strong> Android’s automatic backup may be turned on for this app. If you have backup enabled in your Google account settings, your device may include the app’s data in your own backup, which is stored and controlled by Google and by you. We do not have access to it. You can switch backup off in your device settings.</p>
 
-<h2 id="ccpa">8. CCPA/CPRA — Rights of California Users</h2>
-<p>If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA):</p>
-<ul>
-  <li><strong>Right to Know:</strong> What personal information is collected about you.</li>
-  <li><strong>Right to Delete:</strong> Request deletion of personal information.</li>
-  <li><strong>Right to Opt-Out:</strong> Opt out of the "sale" of personal information. We do not sell personal information.</li>
-  <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
-</ul>
-<p>To submit a CCPA request, contact: <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a></p>
+  <h2 id="permissions">6. App permissions</h2>
+  <ul>
+    <li><strong>INTERNET:</strong> used only so the ad and consent software can load ads and the consent form.</li>
+    <li><strong>ACCESS_NETWORK_STATE:</strong> lets the ad software check whether a connection is available.</li>
+    <li><strong>AD_ID (com.google.android.gms.permission.AD_ID):</strong> lets the ad software read your Advertising ID for ads and ad measurement. It is not used for anything else.</li>
+  </ul>
+  <p>The app does not ask for camera, microphone, contacts, calendar, location, phone, SMS or storage permissions, and it does not access your photos or files.</p>
 
-<h2 id="third-party">9. Third-Party Services</h2>
-<p>This app integrates the following third-party service:</p>
-<ul>
-  <li><strong>Google AdMob</strong> (Google LLC, USA) — Advertising platform. Governed by Google's Privacy Policy and Terms of Service.</li>
-</ul>
-<p>We are not responsible for the privacy practices of third-party services. We encourage you to review their privacy policies.</p>
+  <h2 id="features">7. Features you start yourself</h2>
+  <ul>
+    <li><strong>Share:</strong> when you tap Share on a result or summary, the app creates a short text (team names, scores, result) and hands it to the app you choose, such as a messaging app. What happens next is governed by that app. The app does not send it anywhere itself.</li>
+    <li><strong>Contact / Feedback:</strong> opens your email app with a pre-filled address. Whatever you write is sent from your email account, and we use it only to reply to you.</li>
+    <li><strong>Privacy Policy:</strong> opens this page in your web browser.</li>
+  </ul>
 
-<h2 id="changes">10. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. When we update the policy, we will revise the "Last Updated" date at the top of this page.</p>
-<p>We encourage you to review this Privacy Policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+  <h2 id="not-collected">8. What we do not do</h2>
+  <ul>
+    <li>We do not ask you to create an account or sign in.</li>
+    <li>We do not use analytics, crash-reporting or tracking tools of our own.</li>
+    <li>We do not collect your precise or approximate location ourselves.</li>
+    <li>We do not read your contacts, photos, files or messages.</li>
+    <li>We do not sell your personal information.</li>
+    <li>We do not send your match data to any server.</li>
+  </ul>
 
-<h2 id="contact">11. Contact Us</h2>
-<p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
-<ul>
-  <li><strong>Developer:</strong> MD Minhaj Rahman</li>
-  <li><strong>App:</strong> Cricket Quick Score</li>
-  <li><strong>Package:</strong> com.niloy.quickscorecricketpro</li>
-  <li><strong>Email:</strong> <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a></li>
-  <li><strong>Country:</strong> Bangladesh</li>
-</ul>
+  <h2 id="security">9. Security and device checks</h2>
+  <p>Match data stays in the app’s private storage, which other apps cannot normally read. We cannot guarantee the security of data on a device that is rooted, modified or compromised.</p>
+  <p>The app runs simple checks on your device itself, such as whether the device appears to be rooted or an emulator, and whether the app has been tampered with. The result is used only to decide whether to show ads. It is not stored or sent to us or anyone else.</p>
 
-<footer>
-  © 2026 MD Minhaj Rahman · Cricket Quick Score · All rights reserved.<br>
-  This Privacy Policy is effective as of August 2026.
-</footer>
+  <h2 id="children">10. Children’s privacy</h2>
+  <p>Cricket Quick Score is intended for users aged 16 and over, and it is not directed at children. We do not knowingly collect personal information from children. We do not set up accounts, and the app does not collect personal data for us.</p>
+  <p>If you are a parent or guardian and believe a child has used the app in a way that concerns you, contact us at <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a>. You can also delete all app data from the device with Settings → Clear Match History or by uninstalling the app.</p>
+
+  <h2 id="gdpr">11. Your rights: EEA, UK and Switzerland</h2>
+  <p>Because we do not hold your personal data, there is usually nothing for us to access or erase. For ad-related data, the controller is Google. You have the right, under the GDPR and similar laws, to:</p>
+  <ul>
+    <li>access, correct or delete personal data held about you;</li>
+    <li>restrict or object to its processing, including for direct marketing;</li>
+    <li>withdraw consent at any time, without affecting earlier processing: use <strong>Settings → Privacy Options</strong> in the app;</li>
+    <li>complain to your local data protection authority.</li>
+  </ul>
+  <p>Where we rely on your consent (for ads and measurement), the legal basis is Article 6(1)(a) GDPR. To exercise rights about data Google holds, use <a href="https://support.google.com/policies/contact/general_privacy_form" rel="noopener">Google’s privacy request form</a>. For anything about this app, write to <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a>.</p>
+
+  <h2 id="ccpa">12. Your rights: California and other US states</h2>
+  <p>Under the CCPA/CPRA and similar state laws you may have the right to know what personal information is collected, to request deletion or correction, to opt out of the “sale” or “sharing” of personal information, and to not be discriminated against for using these rights.</p>
+  <p>We do not sell personal information. Ads served by Google may use advertising identifiers, which some state laws treat as “sharing” for advertising. You can limit this through the consent and ad controls described in section 4, or by resetting or deleting your Advertising ID in your device settings. You can send requests to <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a>. We will tell you if we hold nothing about you.</p>
+
+  <h2 id="third-party">13. Third-party services</h2>
+  <p>The app uses these third-party components:</p>
+  <ul>
+    <li><strong>Google AdMob / Google Mobile Ads SDK</strong> (Google LLC) for ads. <a href="https://policies.google.com/privacy" rel="noopener">Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543" rel="noopener">AdMob data use</a>.</li>
+    <li><strong>Google User Messaging Platform</strong> (Google LLC) for ad-consent forms.</li>
+    <li><strong>MPAndroidChart</strong>, an open-source library that draws the Worm and Run Rate charts locally on your device. It does not connect to the internet or collect data.</li>
+  </ul>
+  <p>We do not control the privacy practices of third parties, so please read their policies.</p>
+
+  <h2 id="changes">14. Changes to this policy</h2>
+  <p>We may update this policy if the app, the law or our practices change. When we do, we will change the “Last updated” date at the top of this page. Please check this page from time to time. Using the app after an update means you accept the updated policy.</p>
+
+  <h2 id="contact">15. Contact us</h2>
+  <p>
+    Developer: MD Minhaj Rahman<br>
+    App: Cricket Quick Score<br>
+    Package: com.niloy.quickscorecricketpro<br>
+    Email: <a href="mailto:mdminhajrahman28@gmail.com">mdminhajrahman28@gmail.com</a><br>
+    Country: Bangladesh
+  </p>
+
+  <footer>
+    © 2026 MD Minhaj Rahman · Cricket Quick Score. This policy is effective from 21 November 2026.
+  </footer>
+</main>
 
 </body>
 </html>
